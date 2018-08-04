@@ -32,16 +32,19 @@ namespace Assessment3Hangman
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
+            menu.Add("Play");
+            return base.OnPrepareOptionsMenu(menu);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
+            var itemTitle = item.TitleFormatted.ToString();
+
+            switch (itemTitle)
             {
-                return true;
+                case "Play":
+                    StartActivity(typeof(Game));
+                    break;
             }
 
             return base.OnOptionsItemSelected(item);

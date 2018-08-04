@@ -32,7 +32,7 @@ namespace Assessment3Hangman.Data
         {
             try
             {
-                return db.Query<tbl_highScore>("SELECT * FROM tbl_highScore");
+                return db.Query<tbl_highScore>("SELECT * FROM tbl_highScore ORDER BY Score");
             }
             catch (Exception e)
             {
@@ -50,7 +50,7 @@ namespace Assessment3Hangman.Data
                 return fakeitem;
             }
         }
-        public static void AddItem(string name, int score)
+        public static void AddScore(string name, int score)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace Assessment3Hangman.Data
                 Console.WriteLine("Add Error:" + e.Message);
             }
         }
-        public static void EditItem(string name, int score, int listid)
+        public static void EditScore(string name, int score, int listid)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Assessment3Hangman.Data
                 Console.WriteLine("Update Error:" + e.Message);
             }
         }
-        public static void DeleteItem(int listid)
+        public static void DeleteScore(int listid)
         {
             // https://developer.xamarin.com/guides/crossplatform/application_fundamentals/data/part_3_using_sqlite_orm/
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dip">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:id="@+id/tvId"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/lblname"
+            android:paddingTop="8dip"
+            android:paddingLeft="8dip"
+            android:paddingBottom="4dip"
+            android:textSize="18dip"
+            android:text="EPL"
+            android:textColor="#ffffff"
+            android:layout_width="161.5dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="35.0dp" />
+        <TextView
+            android:id="@+id/lblscore"
+            android:paddingTop="8dip"
+            android:paddingLeft="8dip"
+            android:paddingBottom="4dip"
+            android:textSize="15dip"
+            android:text="9"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:layout_marginLeft="35.0dp" />
+    </LinearLayout>
+</RelativeLayout>
